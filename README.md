@@ -4,6 +4,8 @@ This repository contains the code implementation for the paper: "SCP-116K: A Hig
 
 *(Paper link will be added soon)*
 
+Dataset available at: [https://huggingface.co/datasets/EricLu/SCP-116K](https://huggingface.co/datasets/EricLu/SCP-116K)
+
 ## Pipeline Overview
 
 This is a generalized pipeline for automatically extracting high-quality problem-solution pairs from various publicly available documents crawled from the internet. The pipeline consists of the following steps:
