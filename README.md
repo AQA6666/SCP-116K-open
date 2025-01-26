@@ -6,7 +6,7 @@ This repository contains the code implementation for the paper: "SCP-116K: A Hig
 
 ## Pipeline Overview
 
-This is a generalized pipeline for automatically extracting high-quality problem-solution pairs from textbooks and problem books. The pipeline consists of the following steps:
+This is a generalized pipeline for automatically extracting high-quality problem-solution pairs from various publicly available documents crawled from the internet. The pipeline consists of the following steps:
 
 1. `fileter_pcb_textbook_and_problem_book_from_lib_meta.py`
    - Filter and identify potential textbooks and problem books from library metadata
