@@ -2,7 +2,7 @@
 
 This repository contains the code implementation for the paper: "SCP-116K: A High-Quality Problem-Solution Dataset and a Generalized Pipeline for Automated Extraction in the Higher Education Science Domain"
 
-*(Paper link will be added soon)*
+[Paper Link](https://arxiv.org/abs/2501.15587)
 
 Dataset available at: [https://huggingface.co/datasets/EricLu/SCP-116K](https://huggingface.co/datasets/EricLu/SCP-116K)
 
@@ -42,7 +42,17 @@ For detailed information about each step and how to use the pipeline, please ref
 
 ## Citation
 
-*(Citation information will be added when the paper is published)*
+```bibtex
+@misc{lu2025scp116khighqualityproblemsolutiondataset,
+      title={SCP-116K: A High-Quality Problem-Solution Dataset and a Generalized Pipeline for Automated Extraction in the Higher Education Science Domain}, 
+      author={Dakuan Lu and Xiaoyu Tan and Rui Xu and Tianchu Yao and Chao Qu and Wei Chu and Yinghui Xu and Yuan Qi},
+      year={2025},
+      eprint={2501.15587},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.15587}, 
+}
+```
 
 ## License
 
