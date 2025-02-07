@@ -56,6 +56,7 @@ For detailed information about each step and how to use the pipeline, please ref
 
 ## License
 
-MIT License
+Dataset is licensed under the [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+Code is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 Copyright (c) 2024
