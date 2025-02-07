@@ -36,8 +36,9 @@ for p_or_s in problems_and_solutions:
         solutions_count += 1
 print(f"total size: {len(problems_and_solutions)}, problems count: {problems_count}, solutions count: {solutions_count}")
 # data examples:
-# {"problem number": "1.48", "problem": "A genetic variant is indicated as follows: NM_006735.4(HOXA2):c.394T>A (p.Ser132Thr) Which part of this phrasing refers to the specific genetic change in the reference sequence of the coding DNA? A. NM_006735.4 B. HOXA2 C. c.394T>A D. p.Ser132Thr", "book": "./Books/Biology/MEDICAL GENETICS AND GENOMICS  questions for board review. (BENJAMIN D. SOLOMON) (Z-Library).jsonl", "chunk_number": 2, "page_number_list": [16, 17, 18, 19], "is_bad": false}
-# {"solution number": "1.48", "solution": "C", "book": "./Books/Biology/MEDICAL GENETICS AND GENOMICS  questions for board review. (BENJAMIN D. SOLOMON) (Z-Library).jsonl", "chunk_number": 2, "page_number_list": [16, 17, 18, 19], "is_bad": false}
+# {"problem number": "1.48", "problem": "A genetic variant is indicated as follows: NM_006735.4(HOXA2):c.394T>A (p.Ser132Thr) Which part of this phrasing refers to the specific genetic change in the reference sequence of the coding DNA? A. NM_006735.4 B. HOXA2 C. c.394T>A D. p.Ser132Thr", "book": "./docs/MEDICAL GENETICS AND GENOMICS.jsonl", "chunk_number": 2, "page_number_list": [16, 17, 18, 19], "is_bad": false}
+# {"solution number": "1.48", "solution": "C", "book": "./docs/MEDICAL GENETICS AND GENOMICS.jsonl", "chunk_number": 2, "page_number_list": [16, 17, 18, 19], "is_bad": false}
+
 
 # type unify to solve bug
 print("type unify to solve bug")

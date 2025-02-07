@@ -10,19 +10,19 @@ Dataset available at: [https://huggingface.co/datasets/EricLu/SCP-116K](https://
 
 This is a generalized pipeline for automatically extracting high-quality problem-solution pairs from various publicly available documents crawled from the internet. The pipeline consists of the following steps:
 
-1. `fileter_pcb_textbook_and_problem_book_from_lib_meta.py`
-   - Filter and identify potential textbooks and problem books from library metadata
+1. `fileter_doc_from_lib_meta.py`
+   - Filter and identify potential available documents from database metadata
 
 2. `transfer_pdf_to_text_with_4o.py`
    - Convert PDF documents to text format with enhanced OCR capabilities
 
-3. `get_book_page_unit_start_index.py`
+3. `get_doc_page_unit_start_index.py`
    - Generate page and unit indices for better content organization
 
-4. `split_book_to_chunk_by_llm_index.py`
-   - Split books into manageable chunks using LLM-based indexing
+4. `split_doc_to_chunk_by_llm_index.py`
+   - Split documents into manageable chunks using LLM-based indexing
 
-5. `extract_problem_and_solution_from_book_text.py`
+5. `extract_problem_and_solution_from_doc_text.py`
    - Extract potential problem-solution pairs from the processed text
 
 6. `filter_problem_and_solution.py`
@@ -38,7 +38,7 @@ This is a generalized pipeline for automatically extracting high-quality problem
 
 For detailed information about each step and how to use the pipeline, please refer to:
 - The individual Python files in this repository
-- The research paper (link will be added soon)
+- The research paper
 
 ## Citation
 
