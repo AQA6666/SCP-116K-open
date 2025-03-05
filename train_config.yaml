@@ -1,0 +1,48 @@
+framework: mlm
+model: qwen2.5
+
+data:
+  max_seq_length: 32768
+  pack_sequences: True
+  append_eod: True
+  shuffle: True
+  use_template: qwen2.5
+
+# training config
+num_train_epochs: 1.0
+# num_train_steps: 1200
+micro_batch_size: 1
+global_batch_size: 16
+learning_rate: 0.00001
+min_learning_rate: 0.000001
+lr_decay_style: cosine
+# num_lr_decay_steps: 1000
+num_lr_decay_epochs: 1
+num_lr_warmup_steps: 0
+weight_decay: 0.1
+gradient_clipping: 1.0
+hidden_dropout: 0.1
+attention_dropout: 0.0
+
+precision: bf16
+
+reset_attention_mask: True
+use_flash_attn: True
+num_query_groups: 8
+
+# 32k需要打开
+sequence_parallel: True
+recompute_select_layers: "qkv attn mlp"
+recompute_method: uniform
+recompute_num_layers: 1
+
+tensor_model_parallel_size: 4
+pipeline_model_parallel_size: 8
+hidden_size: 5120
+ffn_hidden_size: 27648
+num_attention_heads: 40
+num_layers: 64
+max_position_embeddings: 131072
+rotary_base: 1000000
+apply_layernorm_1p: False
+make_vocab_size_divisible_by: 128
