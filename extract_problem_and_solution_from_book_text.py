@@ -76,26 +76,15 @@ This task is important for my work, so please strictly follow the requirements.
     while retries <= max_retries:
         try:
             client = OpenAI(api_key=args.api_key, base_url=args.base_url)
-            if 'gpt' in args.model_name or 'o' in args.model_name:
-                response = client.chat.completions.create(
-                    model=args.model_name,
-                    messages=[{"role": "user", "content": prompt}],
-                    extra_body={},
-                    stream=False,
-                    temperature=args.temperature
-                )
-                
-                response_content = response.choices[0].message.content
-            else:
-                response = client.chat.completions.create(
-                    model=args.model_name, 
-                    messages=[{'role': 'user', 'content': prompt}],
-                    temperature=args.temperature,
-                    stream=False
-                )
-                
-                response_content = response.choices[0].message.content
+            response = client.chat.completions.create(
+                model=args.model_name, 
+                messages=[{'role': 'user', 'content': prompt}],
+                temperature=args.temperature,
+                stream=False
+            )
             
+            response_content = response.choices[0].message.content
+        
             print(response_content)
             # chunk['response'] = response_content
             json_content = response_content.split('```json')[-1].split('```')[0]
