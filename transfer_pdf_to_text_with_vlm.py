@@ -8,7 +8,6 @@ from io import BytesIO
 from PIL import Image
 from multiprocessing import Pool
 from tqdm import tqdm
-from clean_book_page_md_tag import clean_text
 import argparse
 from openai import OpenAI
 import os
@@ -91,12 +90,6 @@ Ensure the conversion is clear, precise, and adheres to proper Markdown syntax.
                             ]
             }
             
-            # 如果模型名称包含 'gpt'，添加特殊参数
-            if 'gpt' in args.model_name.lower():
-                request_params.update({
-                    "extra_body": {},
-                    "extra_headers": {'apikey': args.api_key}
-                })
             
             # Get OCR result using OpenAI client
             client = OpenAI(
@@ -107,7 +100,6 @@ Ensure the conversion is clear, precise, and adheres to proper Markdown syntax.
             response = client.chat.completions.create(**request_params)
             result = response.choices[0].message.content
             print(result)
-            result = clean_text(result)
             text_dict = {'id': image['id'], 'text': result}
             return text_dict  # 如果成功，返回response
         except Exception as e:
