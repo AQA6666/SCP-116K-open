@@ -4,7 +4,7 @@ import fnmatch
 
 
 def load_jsonl(file_path):
-    with open(file_path) as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         data = [json.loads(line) for line in f.readlines()]
     return data
 

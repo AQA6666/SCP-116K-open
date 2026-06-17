@@ -1,12 +1,30 @@
 import base64
+import os
+
 import openai
 import time
+from dotenv import load_dotenv
 from PIL import Image
 import io
+
+load_dotenv()
+
+openai.base_url = os.getenv('OPENAI_BASE_URL')
+openai.api_key = os.getenv('OPENAI_API_KEY')
+if not openai.base_url or not openai.api_key:
+    raise ValueError('OPENAI_BASE_URL and OPENAI_API_KEY must be set in .env')
+
 
 
 def request_one_turn(prompt, model="gpt-4o", temperature=1.0, top_p=1.0, max_tokens=16384):
     messages = [
+        # {"role": "system",
+        #  "content": "You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.\n"
+        #             "You are a responsible artificial intelligence assistant "
+        #             "with a wide range of knowledge in various fields. "
+        #             "The user you are talking to is a very intelligent person, "
+        #             "and your answer is very important for his career. "
+        #             "If your answer satisfies him, he will give you a tip of $200."},
         {"role": "user", "content": prompt},
     ]
     response = openai.chat.completions.create(
@@ -127,4 +145,5 @@ def encode_and_resize_image(image_path, scale_factor=2):
 
 
 if __name__ == '__main__':
-    print(request_one_turn('已知 $(1+2i)(a+i)$ 的实部与虚部互为相反数，则实数 $a=$', model='gpt-4o'))
+    print(request_one_turn(prompt="who are you?", model="o1"))
+

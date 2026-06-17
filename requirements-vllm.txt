@@ -1,0 +1,12 @@
+# Dependencies for locally serving open-source models with vLLM.
+# Use this environment on GPU machines to run open_vllm_serving.sh.
+# Pipeline scripts can then call the local endpoint via OpenAI-compatible APIs.
+#
+# Recommended: Python 3.10+, NVIDIA GPU with CUDA support
+# Install PyTorch with the CUDA build matching your driver first if needed, then:
+#   pip install -r requirements-vllm.txt
+#
+# Note: vLLM is typically deployed in a separate environment from the pipeline.
+
+vllm
+torch

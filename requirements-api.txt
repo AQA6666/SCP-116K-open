@@ -1,0 +1,15 @@
+# Pipeline runtime dependencies for calling external OpenAI-compatible APIs.
+# Use this environment to run the data extraction scripts in this repository.
+# vLLM is NOT required; point scripts to a remote or third-party API endpoint.
+#
+# Recommended: Python 3.10+
+# Install: pip install -r requirements-api.txt
+
+openai
+python-dotenv
+Pillow
+PyMuPDF
+tqdm
+tiktoken
+sentence-transformers
+torch
