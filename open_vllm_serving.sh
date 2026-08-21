@@ -1,6 +1,6 @@
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 export PORT_NUM=8998
-export MODEL_PATH=/ddn/gemini/gemini-sharedata/space/ros2p9tmh1z4/Models/Qwen/Qwen3-Next-80B-A3B-Instruct
+export MODEL_PATH=Qwen/Qwen3-Next-80B-A3B-Instruct
 export MODEL_NAME=Qwen3-Next-80B-A3B-Instruct
 export TP=4
 
@@ -35,7 +35,7 @@ python -m vllm.entrypoints.openai.api_server \
     --served-model-name ${MODEL_NAME} \
     --compilation_config.cudagraph_mode=PIECEWISE \
     --max-model-len 32768 \
-    -tp ${TP} > /ddn/shaojw_group/ludakuan/log/vllm_serving_${MODEL_NAME}_${TIMESTAMP}.out &
+    -tp ${TP} > ./log/vllm_serving_${MODEL_NAME}_${TIMESTAMP}.out &
 
 SERVICE_PID=$!
 SERVICE_PORT=$PORT_NUM
