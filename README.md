@@ -1,10 +1,16 @@
+> **New dataset version: [SCP-378K](https://huggingface.co/datasets/EricLu/SCP-378K)**
+>
+> A larger, higher-quality release is now available at **[https://huggingface.co/datasets/EricLu/SCP-378K](https://huggingface.co/datasets/EricLu/SCP-378K)**. Compared with SCP-116K, it **increases the number of examples**, **improves extraction quality**, and **greatly expands the number of problems paired with matched textbook solutions**. For the full list of changes and the most accurate description, please see the [SCP-378K dataset card](https://huggingface.co/datasets/EricLu/SCP-378K).
+
 # SCP-116K Dataset Pipeline
 
 This repository contains the code implementation for the paper: "SCP-116K: A High-Quality Problem-Solution Dataset and a Generalized Pipeline for Automated Extraction in the Higher Education Science Domain"
 
 [Paper Link](https://arxiv.org/abs/2501.15587)
 
-Dataset available at: [https://huggingface.co/datasets/EricLu/SCP-116K](https://huggingface.co/datasets/EricLu/SCP-116K)
+**Recommended dataset (new):** [https://huggingface.co/datasets/EricLu/SCP-378K](https://huggingface.co/datasets/EricLu/SCP-378K)
+
+Previous dataset: [https://huggingface.co/datasets/EricLu/SCP-116K](https://huggingface.co/datasets/EricLu/SCP-116K)
 
 ## Pipeline Overview
 
